@@ -4,6 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 type TeamType = {
   team_shortform: string;
@@ -18,7 +21,7 @@ export default function TeamsPage() {
     async function fetchTeams() {
       try {
         setLoading(true);
-        const response = await axios.get("http://localhost:8000/api/teams/");
+        const response = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/teams/`);
         console.log("API Response:", response.data);
 
         // Check if the data has a teams property

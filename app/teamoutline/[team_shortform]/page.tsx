@@ -98,7 +98,7 @@ export default function TeamOutlinePage() {
     try {
       setLoading(true);
       const response = await axios.get(
-        `http://localhost:8000/api/teams/${team_shortform}/outline/`
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/teams/${team_shortform}/outline/`
       );
       console.log("API Response:", response.data);
       setTeamData(response.data);
