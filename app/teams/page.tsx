@@ -123,11 +123,7 @@ export default function TeamsPage() {
               <div className="relative w-20 h-20 mb-4 transition-transform duration-300 group-hover:scale-110">
                 <div className="absolute inset-0 bg-gray-100 dark:bg-gray-700 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
                 <Image
-                  src={`https://d1dglpr230r57l.cloudfront.net/images/thumb/${
-                    team.team_shortform === "JAC"
-                      ? "jax"
-                      : team.team_shortform.toLowerCase()
-                  }.png`}
+                  src={`/assets/${team.team_shortform}.png`}
                   alt={team.team_shortform}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

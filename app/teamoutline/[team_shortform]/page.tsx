@@ -271,11 +271,7 @@ export default function TeamOutlinePage() {
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="relative w-32 h-32">
             <Image
-              src={`https://d1dglpr230r57l.cloudfront.net/images/thumb/${
-                teamData.team.team_shortform === "JAC"
-                  ? "jax"
-                  : teamData.team.team_shortform.toLowerCase()
-              }.png`}
+              src={`/assets/${teamData.team.team_shortform}.png`}
               alt={teamData.team.team_shortform}
               fill
               className="object-contain"
