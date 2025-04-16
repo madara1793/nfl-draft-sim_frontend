@@ -11,8 +11,11 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-8">
-            <Link href="/" className="flex items-center gap-2 text-white hover:text-sport-gold transition-colors">
-              <Logo size="small" />
+            <Link
+              href="/"
+              className="flex items-center gap-2 text-white hover:text-sport-gold transition-colors"
+            >
+              <Logo size="medium" />
               <span className="font-bold text-lg">NFL GM Simulator</span>
             </Link>
             <div className="hidden md:flex items-center gap-6">

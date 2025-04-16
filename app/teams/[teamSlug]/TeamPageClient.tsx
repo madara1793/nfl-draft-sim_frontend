@@ -155,6 +155,13 @@ export default function TeamPageClient({
         `http://127.0.0.1:8000/api/teams/${team_code.toUpperCase()}/outline/`
       );
       console.log("API Response:", response.data);
+      const updateuser = await axios.put(
+        "http://127.0.0.1:8000/api/users/startuser/",
+        {
+          username: "tester",
+          team_code: team_code.toUpperCase(),
+        }
+      );
       setTeamData(response.data);
       setError("");
     } catch (err) {
